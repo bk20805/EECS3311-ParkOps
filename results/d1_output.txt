@@ -1,0 +1,57 @@
+#GIVEN TEST CASES OUTPUT
+Command used: 
+1. bash run.sh compile
+output: COMPILE_OK (warnings, if any, are printed above)
+
+2. bash run.sh run
+output:
+SYNTHETIC FIXTURE; no model invocation or booking mutation.
+{"requiresAccessible":true,"spaceId":"A17","durationHours":3,"version":0,"id":"B1"}
+[{"occupied":true,"accessible":false,"open":false,"id":"A17"},{"occupied":false,"accessible":false,"open":true,"id":"B12"},{"occupied":false,"accessible":true,"open":true,"id":"C03"},{"occupied":true,"accessible":true,"open":true,"id":"D09"}]
+
+3. bash run.sh check
+output: 
+PASS duration endpoints
+PASS invalid duration 0
+PASS invalid duration 25
+PASS invalid duration -1
+PASS invalid identifier null
+PASS invalid identifier 
+PASS invalid identifier b1
+PASS invalid identifier 1B
+PASS invalid identifier ABCDEFGHIJKLMNOPQ
+PASS valid identifiers
+PASS D1-C pending B12, no booking change
+PASS D1-D occupied D09 rejected unchanged
+PASS D1-E unknown target rejected unchanged
+PASS D1-F protected snapshot
+CHECKS 14; FAILED 0
+
+#JUnit Student Test Cases
+Commands used: 
+1. bash setup-junit.sh
+output: 
+ % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 2807k  100 2807k    0     0  42.9M      0 --:--:-- --:--:-- --:--:-- 43.5M
+JUnit 6.0.3 cached and SHA-256 verified.
+
+2. bash run.sh test
+output: 
+Thanks for using JUnit! Support its development at https://junit.org/sponsoring
+
+INFRASTRUCTURE_CHECKS_PASS 31; localhost fake HTTP only; no live model or project solution verified.
+
+Test run finished after 297 ms
+[         7 containers found      ]
+[         0 containers skipped    ]
+[         7 containers started    ]
+[         0 containers aborted    ]
+[         7 containers successful ]
+[         0 containers failed     ]
+[        21 tests found           ]
+[         0 tests skipped         ]
+[        21 tests started         ]
+[         0 tests aborted         ]
+[        21 tests successful      ]
+[         0 tests failed          ]
